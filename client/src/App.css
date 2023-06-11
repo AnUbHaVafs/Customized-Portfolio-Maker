@@ -69,6 +69,7 @@
     height: 80%;
 }
 
+/* //change happened */
 .searchFrame {
     box-sizing: border-box;
 
@@ -881,6 +882,7 @@ Description TBD
     align-items: flex-start;
     padding: 0px;
     gap: 20px;
+    /* // changed here */
 
     width: 738px;
     height: 116px;
