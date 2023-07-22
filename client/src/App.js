@@ -15,6 +15,7 @@ import Profile from 'pages/Auth/Profile';
 import Portfolio from 'pages/Portfolio';
 import UserPage from 'pages/Auth/UserPage';
 import './App.css';
+import UserPortfolioDetails from 'pages/UserPortfolioDetails.js';
 // anubhav // anubhavanubhav
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                 <Route path='/about' element={<About />} />
                 <Route path='/dashboard' element={<Profile />} />
                 <Route path='/dashboard-new' element={<UserPage />} />
+                <Route path='/userDetails' element={<UserPortfolioDetails />} />
                 <Route path='/auth'>
                     <Route path='signup' element={<Auth type="Signup" />} />
                     <Route path='login' element={<Auth type="Login" />} />

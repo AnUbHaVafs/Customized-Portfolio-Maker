@@ -50,6 +50,7 @@ const Auth = ({type}) => {
   }, [username, password, navigate]);
 
   const signup = useCallback(async () => {
+    // console.log(username,email,password)
     await axios.post('https://portfolio-backend-gq18.onrender.com/user/signup', {
       username,
       password,

@@ -5,6 +5,7 @@ import Button from "components/Button";
 import Navbar from "components/Navbar";
 import About from "./About";
 import Working from "./Working";
+import LabelBottomNavigation from "components/BottomNavigation";
 
 const Home = () => {
 	const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Home = () => {
 	};
 
 	return (
+		<>
 		<div className="main">
 			<Navbar />
 			<div className="home">
@@ -60,6 +62,8 @@ const Home = () => {
 			<About />
 			<Working />
 		</div>
+			<LabelBottomNavigation/>
+		</>
 	);
 };
 

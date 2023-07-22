@@ -32,6 +32,8 @@ const createUser = asyncHandler(async (req, res) => {
 		projects
 	} = req.body;
 
+	console.log(username,email,password)
+
 	if (!username) {
 		res.status(400).send({
 			success: false,
@@ -97,7 +99,7 @@ const createUser = asyncHandler(async (req, res) => {
 		} else {
 			// Insert the new user into the database
 			const token = jwt.sign({ username }, JWT_SECRET, {
-				expiresIn: "1d",
+				expiresIn: "30d",
 			});
 
 			res.cookie("token", token, {
@@ -107,7 +109,7 @@ const createUser = asyncHandler(async (req, res) => {
 			});
 
 			userDetails.password = hash;
-
+            console.log(userDetails)
 			await User.create(userDetails)
 				.then(() => res.status(201).json({ success: true, json: token }))
 				.catch((err) => res.status(400).json({ success: false, error: err }));

@@ -1170,3 +1170,10 @@ Description TBD
     width: 50px;
     height: 30px;
 }
+
+.textFields{
+    width:300px;
+    
+    /* height:200px */
+    font-size:40px !important;
+}
